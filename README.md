@@ -1,2 +1,2 @@
-# template-action
-Template for my GitHub actions
+# action-publish-lib-android
+Common lib publish action for my android projects.

@@ -1,8 +1,14 @@
-name: 'Template action'
-description: 'Replace me'
+name: 'Publish lib'
+description: 'Publishes and uploads an archive of the lib'
 runs:
   using: "composite"
   steps:
-    - name: Hello
-      run: echo "Hello World!"
+    - name: Publish to local Maven
       shell: bash
+      run: ./gradlew publishToMavenLocal
+    - name: Upload lib
+      uses: actions/upload-artifact@v4
+      with:
+        name: lib
+        path: ~/.m2/repository
+        if-no-files-found: error
