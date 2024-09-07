@@ -1,3 +1,5 @@
+# Copyright © 2024 Brent Tunnicliff <brent@tunnicliff.dev>
+
 name: 'Publish lib'
 description: 'Publishes and uploads an archive of the lib'
 runs:
